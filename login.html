@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="./styles/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <video autoplay muted loop>
+            <source src="./assets/vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+      </div>
+      <div class="right">
+        <img class="logo" src="./logo.png" alt="" />
+        <div class="signup">
+          <h1>
+            Sign Up<br /><font>or <a href="#">sign in to your account</a></font>
+          </h1>
+          <form action="./index.html">
+            <input type="text" placeholder="First name" id="name" />
+            <input type="text" placeholder="Last name" id="lname" />
+            <input type="email" placeholder="Email" id="email" />
+            <input type="password" placeholder="Password" id="password" />
+            <div class="terms">
+                <input type="checkbox" id="terms" />
+                <h2>I Agree to <a href="#">Slay In Drip Terms</a></h2>
+            </div>
+            <input type="submit" value="Login" />
+          </form>
+          <div class="socials">
+            <i class="fa-brands fas-"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
