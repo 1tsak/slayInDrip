@@ -50,7 +50,7 @@
           <button>Get Started</button> -->
         </div>
         <p class="section-header">CATEGORIES</p>
-        <div class="category-section" style="cursor: pointer;" onclick="window.location.href='/categories.html'">
+        <div class="category-section" style="cursor: pointer;" onclick="redirectToCategoryPage()">
           <div class="category-card">
             <img class="card-img" src="./assets/oversized-tees.jpg" alt="" />
             <p>Oversized Tshirts</p>
@@ -69,7 +69,7 @@
           </div>
         </div>
         <p class="section-header">FEATURED</p>
-        <div class="featured-section" style="cursor: pointer;" onclick="window.location.href='/product.html'">
+        <div class="featured-section" style="cursor: pointer;" onclick="redirectToProductPage()">
           <div class="featured-card">
             <img class="star-product" src="./assets/star.svg" alt="" />
             <img class="card-img" src="./assets/oversized1.jpg" alt="" />
@@ -171,5 +171,19 @@
       </div>
       <div class="lower-footer-section">&copy; All Rights Reserved</div>
     </footer>
+    <script>
+      function redirectToProductPage() {
+        var currentURL = window.location.href;
+        var baseURL = currentURL.substring(0, currentURL.lastIndexOf('/') + 1);
+        var newURL = baseURL + 'product.html';
+        window.location.href = newURL;
+      }
+      function redirectToCategoryPage() {
+        var currentURL = window.location.href;
+        var baseURL = currentURL.substring(0, currentURL.lastIndexOf('/') + 1);
+        var newURL = baseURL + 'categories.html';
+        window.location.href = newURL;
+      }
+    </script>
   </body>
 </html>
