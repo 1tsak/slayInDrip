@@ -1,162 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slay In Drip</title>
-    <link rel="shortcut icon" href="#" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
 
-  <body>
-    <div class="bg"></div>
-    <header>
-      <img class="logo-nav" src="./assets/logo.png" alt="" />
-      <nav>
-        <ul>
-          <a href="./index.html">
-            <li>Home</li>
-          </a>
-          <a href="./categories.html">
-            <li>Categories</li>
-          </a>
-          <a href="./about.html">
-            <li>About</li>
-          </a>
-          <a href="./contactus.html">
-            <li>Contact</li>
-          </a>
-        </ul>
-      </nav>
-      <div class="action-btns">
-        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-        <i class="fa-solid fa-cart-shopping fa-lg"></i>
-        <a href="./login.html"><button class="login-btn">Login</button></a>
-      </div>
-    </header>
-    <main>
-      <div class="container">
-        <div class="hero-section">
-          <img src="./assets/carousel3.jpg" alt="" srcset="" />
-          <!-- <img src="./assets/shopping.svg" alt="" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slay In Drip</title>
+  <link rel="shortcut icon" href="#" />
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="bg"></div>
+  <header>
+    <img class="logo-nav" src="./assets/logo.png" alt="" />
+    <nav>
+      <ul>
+        <a href="./index.html">
+          <li>Home</li>
+        </a>
+        <a href="./categories.html">
+          <li>Categories</li>
+        </a>
+        <a href="./about.html">
+          <li>About</li>
+        </a>
+        <a href="./contactus.html">
+          <li>Contact</li>
+        </a>
+      </ul>
+    </nav>
+    <div class="action-btns">
+      <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+      <i class="fa-solid fa-cart-shopping fa-lg"></i>
+      <a href="./login.html"><button class="login-btn">Login</button></a>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="hero-section">
+        <img src="./assets/carousel3.jpg" alt="" srcset="" />
+        <!-- <img src="./assets/shopping.svg" alt="" />
           <p>Latest Tech Accesories at your fingertips</p>
           <button>Get Started</button> -->
+      </div>
+      <p class="section-header">CATEGORIES</p>
+      <div class="category-section" style="cursor: pointer;" onclick="redirectToCategoryPage()">
+        <div class="category-card">
+          <img class="card-img" src="./assets/oversized-tees.jpg" alt="" />
+          <p>Oversized Tshirts</p>
         </div>
-        <p class="section-header">CATEGORIES</p>
-        <div class="category-section" style="cursor: pointer;" onclick="redirectToCategoryPage()">
-          <div class="category-card">
-            <img class="card-img" src="./assets/oversized-tees.jpg" alt="" />
-            <p>Oversized Tshirts</p>
-          </div>
-          <div class="category-card">
-            <img class="card-img" src="./assets/jeans.jpg" alt="" />
-            <p>Jeans</p>
-          </div>
-          <div class="category-card">
-            <img class="card-img" src="./assets/shades.jpg" alt="" />
-            <p>Shades</p>
-          </div>
-          <div class="category-card">
-            <img class="card-img" src="./assets/shoes.jpg" alt="" />
-            <p>Sneakers</p>
-          </div>
+        <div class="category-card">
+          <img class="card-img" src="./assets/jeans.jpg" alt="" />
+          <p>Jeans</p>
         </div>
-        <p class="section-header">FEATURED</p>
-        <div class="featured-section" style="cursor: pointer;" onclick="redirectToProductPage()">
-          <div class="featured-card">
-            <img class="star-product" src="./assets/star.svg" alt="" />
-            <img class="card-img" src="./assets/oversized1.jpg" alt="" />
-            <div class="product-info">
-              <p>Comfy Chic: Oversized T-Shirt and Pants Set</p>
-              <div class="product-description">
-                Elevate your comfort with our Oversized T-Shirt and Pants Set.
-                Effortlessly stylish, this cozy combo offers relaxed elegance
-                for any occasion.
-              </div>
-              <div class="product-action">
-                <button>
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  ADD TO CART
-                </button>
-                <button>BUY</button>
-              </div>
+        <div class="category-card">
+          <img class="card-img" src="./assets/shades.jpg" alt="" />
+          <p>Shades</p>
+        </div>
+        <div class="category-card">
+          <img class="card-img" src="./assets/shoes.jpg" alt="" />
+          <p>Sneakers</p>
+        </div>
+      </div>
+      <p class="section-header">FEATURED</p>
+      <div class="featured-section" style="cursor: pointer;" onclick="redirectToProductPage()">
+        <div class="featured-card">
+          <img class="star-product" src="./assets/star.svg" alt="" />
+          <img class="card-img" src="./assets/oversized1.jpg" alt="" />
+          <div class="product-info">
+            <p>Comfy Chic: Oversized T-Shirt and Pants Set</p>
+            <div class="product-description">
+              Elevate your comfort with our Oversized T-Shirt and Pants Set.
+              Effortlessly stylish, this cozy combo offers relaxed elegance
+              for any occasion.
+            </div>
+            <div class="product-action">
+              <button>
+                <i class="fa-solid fa-cart-shopping"></i>
+                ADD TO CART
+              </button>
+              <button>BUY</button>
             </div>
           </div>
-          <div class="featured-card">
-            <img class="star-product" src="./assets/star.svg" alt="" />
-            <img class="card-img" src="./assets/tshirt.jpg" alt="" />
-            <div class="product-info">
-              <p>Ultimate Comfort: Classic Oversized T-Shirt</p>
-              <div class="product-description">
-                Experience unmatched comfort with our classic oversized t-shirt.
-                Crafted for a relaxed fit and soft feel, it's the perfect
-                essential for your everyday style.
-              </div>
-              <div class="product-action">
-                <button>
-                  <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <div class="featured-card">
+          <img class="star-product" src="./assets/star.svg" alt="" />
+          <img class="card-img" src="./assets/tshirt.jpg" alt="" />
+          <div class="product-info">
+            <p>Ultimate Comfort: Classic Oversized T-Shirt</p>
+            <div class="product-description">
+              Experience unmatched comfort with our classic oversized t-shirt.
+              Crafted for a relaxed fit and soft feel, it's the perfect
+              essential for your everyday style.
+            </div>
+            <div class="product-action">
+              <button>
+                <i class="fa-solid fa-cart-shopping"></i>
 
-                  ADD TO CART
-                </button>
-                <button>BUY</button>
-              </div>
+                ADD TO CART
+              </button>
+              <button>BUY</button>
             </div>
           </div>
-          <div class="featured-card">
-            <img class="star-product" src="./assets/star.svg" alt="" />
-            <img class="card-img" src="./assets/hoodie.jpg" alt="" />
-            <div class="product-info">
-              <p>Cozy Vibes: Essential Hoodies for Every Wardrobe</p>
-              <div class="product-description">
-                Wrap yourself in warmth and style with our collection of
-                hoodies. From timeless classics to modern designs.
-              </div>
-              <div class="product-action">
-                <button>
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  ADD TO CART
-                </button>
-                <button>BUY</button>
-              </div>
+        </div>
+        <div class="featured-card">
+          <img class="star-product" src="./assets/star.svg" alt="" />
+          <img class="card-img" src="./assets/hoodie.jpg" alt="" />
+          <div class="product-info">
+            <p>Cozy Vibes: Essential Hoodies for Every Wardrobe</p>
+            <div class="product-description">
+              Wrap yourself in warmth and style with our collection of
+              hoodies. From timeless classics to modern designs.
+            </div>
+            <div class="product-action">
+              <button>
+                <i class="fa-solid fa-cart-shopping"></i>
+                ADD TO CART
+              </button>
+              <button>BUY</button>
             </div>
           </div>
-          <div class="featured-card">
-            <img class="star-product" src="./assets/star.svg" alt="" />
-            <img class="card-img" src="./assets/fullsleve.jpg" alt="" />
-            <div class="product-info">
-              <p>Sleek Comfort: High Neck Full Sleeve T-Shirt</p>
-              <div class="product-description">
-                Elevate your wardrobe with our high neck, full sleeve t-shirt.
-                Experience a perfect blend of style and comfort, ideal for any
-                season or occasion.
-              </div>
-              <div class="product-action">
-                <button class="add-to-cart">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  ADD TO CART
-                </button>
-                <button>BUY</button>
-              </div>
+        </div>
+        <div class="featured-card">
+          <img class="star-product" src="./assets/star.svg" alt="" />
+          <img class="card-img" src="./assets/fullsleve.jpg" alt="" />
+          <div class="product-info">
+            <p>Sleek Comfort: High Neck Full Sleeve T-Shirt</p>
+            <div class="product-description">
+              Elevate your wardrobe with our high neck, full sleeve t-shirt.
+              Experience a perfect blend of style and comfort, ideal for any
+              season or occasion.
+            </div>
+            <div class="product-action">
+              <button class="add-to-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                ADD TO CART
+              </button>
+              <button>BUY</button>
             </div>
           </div>
         </div>
       </div>
-    </main>
-    <footer>
-      <div class="footer-content">
+    </div>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div>
+        <font>USEFUL LINKS</font>
         <ul>
           <li>Home</li>
           <li>About</li>
           <li>Categories</li>
           <li>Contact</li>
         </ul>
+      </div>
+      <div>
+        <font>ADDRESS</font>
+        <ul>
+          <li>123 Main Street</li>
+          <li>New York, NY 10001</li>
+          <li>USA</li>
+        </ul>
+      </div>
+      <div class="social-cont">
+        <font>Socials</font>
+        <br>
         <div class="social-footer">
           <a href="https://facebook.com">
             <i class="fa-brands fa-facebook-f"></i>
@@ -169,21 +181,23 @@
           </a>
         </div>
       </div>
-      <div class="lower-footer-section">&copy; All Rights Reserved</div>
-    </footer>
-    <script>
-      function redirectToProductPage() {
-        var currentURL = window.location.href;
-        var baseURL = currentURL.substring(0, currentURL.lastIndexOf('/') + 1);
-        var newURL = baseURL + 'product.html';
-        window.location.href = newURL;
-      }
-      function redirectToCategoryPage() {
-        var currentURL = window.location.href;
-        var baseURL = currentURL.substring(0, currentURL.lastIndexOf('/') + 1);
-        var newURL = baseURL + 'categories.html';
-        window.location.href = newURL;
-      }
-    </script>
-  </body>
+    </div>
+    <div class="lower-footer-section">&copy; All Rights Reserved</div>
+  </footer>
+  <script>
+    function redirectToProductPage() {
+      var currentURL = window.location.href;
+      var baseURL = currentURL.substring(0, currentURL.lastIndexOf('/') + 1);
+      var newURL = baseURL + 'product.html';
+      window.location.href = newURL;
+    }
+    function redirectToCategoryPage() {
+      var currentURL = window.location.href;
+      var baseURL = currentURL.substring(0, currentURL.lastIndexOf('/') + 1);
+      var newURL = baseURL + 'categories.html';
+      window.location.href = newURL;
+    }
+  </script>
+</body>
+
 </html>
