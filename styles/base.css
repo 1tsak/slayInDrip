@@ -10,6 +10,10 @@ html,body {
   width: 100%;
   background-color: #ffffff;
 }
+a{
+  text-decoration: none;
+  color: #212A3E;
+}
 header {
   padding: 0.5rem 1.5rem;
   display: flex;
