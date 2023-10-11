@@ -28,22 +28,66 @@
           <h1>
             <a href="#">Sign Up</a> <br /><font>to continue exploring</font>
           </h1>
-          <form action="./index.html">
-            <input type="text" placeholder="First name" id="name" />
-            <input type="text" placeholder="Last name" id="lname" />
-            <input type="email" placeholder="Email" id="email" />
-            <input type="password" placeholder="Password" id="password" />
+          <form id="signup-form">
+            <input type="text" placeholder="First name" id="name" required />
+            <input type="text" placeholder="Last name" id="lname" required />
+            <input type="email" placeholder="Email" id="email" required />
+            <input type="password" placeholder="Password" id="password" required />
             <div class="terms">
-                <input type="checkbox" id="terms" />
-                <h2>I Agree to <a href="./tnc.html" target="_blank">Slay In Drip Terms</a></h2>
+              <input type="checkbox" id="terms" required />
+              <h2>I Agree to <a href="./tnc.html" target="_blank">Slay In Drip Terms</a></h2>
             </div>
-            <input type="submit" value="Login" />
+            <input type="submit" value="Sign Up" />
           </form>
+          <p>Already have an account? <a href="./login.html" target="_blank">Login</a></p>
           <!-- <div class="socials">
             <i class="fa-brands fas-"></i>
           </div> -->
         </div>
       </div>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const signupForm = document.getElementById('signup-form');
+  
+        signupForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+  
+          // Get user input
+          const firstName = document.getElementById('name').value;
+          const lastName = document.getElementById('lname').value;
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+  
+          // Check if the email is already registered
+          const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+          const isExistingUser = existingUsers.some(user => user.email === email);
+  
+          if (isExistingUser) {
+            alert('This email is already registered. Please use a different email.');
+            return;
+          }
+  
+          // Create a new user object
+          const newUser = {
+            firstName,
+            lastName,
+            email,
+            password,
+            loggedIn:false
+          };
+  
+          // Store the user in localStorage
+          existingUsers.push(newUser);
+          localStorage.setItem('users', JSON.stringify(existingUsers));
+  
+          // You can redirect the user to a success page or perform any other action here
+          alert('Sign-up successful! You can now log in.');
+  
+          // Reset the form
+          signupForm.reset();
+        });
+      });
+    </script>
   </body>
 </html>
