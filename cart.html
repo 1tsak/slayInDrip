@@ -1,116 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/base.css" />
-    <link rel="stylesheet" href="./styles/cart.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-</head>
-<body>
-    <header>
-        <img class="logo-nav" src="./assets/logo.png" alt="" />
-        <nav>
-          <ul>
-            <a href="./index.html">
-              <li>Home</li>
-            </a>
-            <a href="./categories.html">
-              <li>Categories</li>
-            </a>
-            <a href="./about.html">
-              <li>About</li>
-            </a>
-            <a href="./contactus.html">
-              <li>Contact</li>
-            </a>
-            </a>
-          </ul>
-        </nav>
-        <div class="action-btns">
-          <a href="./search.html"><i class="fa-solid fa-magnifying-glass fa-lg"></i></a>
-          <a href="./cart.html"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
-          <a href="./login.html"><button class="login-btn">Login</button></a>
-        </div>
-      </header>
-      <main>
-        <h1 class="section-header">Cart</h1>
-        <div class="cart-main">
 
-          <table>
-            <thead>
-              <tr>
-                <th>Image</th>
-                <th>Title</th>
-                <th>Price</th>
-                <th>Quantity</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Product 1 -->
-              <tr>
-                    <td><img src="product1.jpg" alt="Product 1" class="product-image"></td>
-                    <td>Product 1 Title</td>
-                    <td>$19.99</td>
-                    <td><input type="number" value="1" min="1"></td>
-                  </tr>
-                  
-                  <!-- Product 2 -->
-                  <tr>
-                    <td><img src="product2.jpg" alt="Product 2" class="product-image"></td>
-                    <td>Product 2 Title</td>
-                    <td>$29.99</td>
-                    <td><input type="number" value="1" min="1"></td>
-                  </tr>
-                  
-                  <!-- Add more products here following the same structure -->
-                </tbody>
-              </table>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./styles/cart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <img class="logo-nav" src="./assets/logo.png" alt="" />
+    <nav>
+      <ul>
+        <a href="./index.html">
+          <li>Home</li>
+        </a>
+        <a href="./categories.html">
+          <li>Categories</li>
+        </a>
+        <a href="./about.html">
+          <li>About</li>
+        </a>
+        <a href="./contactus.html">
+          <li>Contact</li>
+        </a>
+        </a>
+      </ul>
+    </nav>
+    <div class="action-btns">
+      <a href="./search.html"><i class="fa-solid fa-magnifying-glass fa-lg"></i></a>
+      <a href="./cart.html"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
+      <a href="./login.html"><button class="login-btn">Login</button></a>
+    </div>
+  </header>
+  <main>
+    <h1 class="section-header">Cart</h1>
+    <div class="cart-main">
+
+      <div class="products">
+        <div class="product-item">
+          <h4>#1</h4>
+          <img src="./assets/shoes.jpg" alt="" srcset="">
+          <div class="info">
+            <h3>Red Sneakers</h3>
+            <p>Elevate your footwear game with our eye-catching Red Sneakers. Combining fashion and function.</p>
+            <h6>In Stock</h6>
+            <div class="product-qty">
+              Qty.
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
             </div>
-            </main>
-            <footer>
-              <div class="footer-content">
-                <div>
-                  <font>USEFUL LINKS</font>
-                  <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Categories</li>
-                    <li>Contact</li>
-                  </ul>
-                </div>
-                <div>
-                  <font>ADDRESS</font>
-                  <ul>
-                    <li>123 Main Street</li>
-                    <li>New York, NY 10001</li>
-                    <li>USA</li>
-                  </ul>
-                </div>
-                <div class="social-cont">
-                  <font>Socials</font>
-                  <br>
-                  <div class="social-footer">
-                    <a href="https://facebook.com">
-                      <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://facebook.com">
-                      <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://facebook.com">
-                      <i class="fa-brands fa-twitter"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="lower-footer-section">&copy; All Rights Reserved</div>
-            </footer>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="coupons">
+          <h5>Coupons</h5>
+          <div class="coupons-main">
+            <i class="fa-solid fa-tag"></i>
+            <h5>Apply Coupons</h5>
+            <button>APPLY</button>
+          </div>
+        </div>
+        <h5>PRICE DETAILS</h5>
+        <div class="price-summary">
+          <div class="price-details">
+            <h5>Total MRP</h5>
+            <h5>₹80,000</h5>
+          </div>
+          <div class="price-details">
+            <h5>Discount on MRP</h5>
+            <h5>₹1,000</h5>
+          </div>
+          <div class="price-details">
+            <h5>Convenience Fee*</h5>
+            <h5>₹99</h5>
+          </div>
+          <div class="divider"></div>
+          <div class="total-mrp">
+            <h5>Total MRP</h5>
+            <h5>₹79,099</h5>
+          </div>
+        </div>
+        <button class="checkout-btn">Proceed to checkout</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div>
+        <font>USEFUL LINKS</font>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Categories</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div>
+        <font>ADDRESS</font>
+        <ul>
+          <li>123 Main Street</li>
+          <li>New York, NY 10001</li>
+          <li>USA</li>
+        </ul>
+      </div>
+      <div class="social-cont">
+        <font>Socials</font>
+        <br>
+        <div class="social-footer">
+          <a href="https://facebook.com">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://facebook.com">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://facebook.com">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="lower-footer-section">&copy; All Rights Reserved</div>
+  </footer>
 </body>
+
 </html>
