@@ -49,6 +49,7 @@
     border: none;
     border-radius: 0.25rem;
     cursor: pointer;
+    text-align: center;
 }
 
 .coupons-main{
@@ -96,4 +97,10 @@
 }
 .products h4{
     color: #212a3e;
+}
+select{
+    padding: 0.15rem 0.5rem;
+    border-color: #212a3e;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
 }
