@@ -1,79 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="./styles/base.css" />
-    <link rel="stylesheet" href="./styles/login.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <div class="left">
-        <video autoplay muted loop>
-            <source src="./assets/vid.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <div class="right">
-        <img class="logo" src="./assets/logo.png" alt="" />
-        <div class="signup">
-          <h1>
-            <a href="#">Log In</a> <br /><font>into your account to continue</font>
-          </h1>
-          <form id="login-form">
-            <input type="email" placeholder="Email" id="email" required />
-            <input type="password" placeholder="Password" id="password" required />
-            <div class="terms">
-                <input type="checkbox" id="terms" />
-                <h2>I Agree to <a href="tnc.html">Slay In Drip Terms</a></h2>
-            </div>
-            <input type="submit" value="Login" />
-          </form>
-          <p>Don't have an account? <a href="./signup.html" target="_blank">Signup</a></p>
-          <!-- <div class="socials">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./styles/login.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+      <video autoplay muted loop>
+        <source src="./assets/vid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="right">
+      <img class="logo" src="./assets/logo.png" alt="" />
+      <div class="signup">
+        <h1>
+          <a href="#">Log In</a> <br />
+          <font>into your account to continue</font>
+        </h1>
+        <form id="login-form">
+          <input type="email" placeholder="Email" id="email" required />
+          <input type="password" placeholder="Password" id="password" required />
+          <div class="terms">
+            <input type="checkbox" id="terms" />
+            <h2>I Agree to <a href="tnc.html" target="_blank">Slay In Drip Terms</a></h2>
+          </div>
+          <input type="submit" value="Login" />
+        </form>
+        <p>Don't have an account? <a href="./signup.html" target="_blank">Signup</a></p>
+        <!-- <div class="socials">
             <i class="fa-brands fas-"></i>
           </div> -->
-        </div>
       </div>
     </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const loginForm = document.getElementById('login-form');
-  
-        loginForm.addEventListener('submit', function (e) {
-          e.preventDefault();
-  
-          // Get user input
-          const email = document.getElementById('email').value;
-          const password = document.getElementById('password').value;
-  
-          // Check if the email and password match a user in localStorage
-          const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
-          const matchedUser = existingUsers.find(user => user.email === email && user.password === password);
-  
-          if (matchedUser) {
-            // You can redirect the user to a dashboard or perform any other action here
-            alert('Login successful!');
-            var currentURL = window.location.href;
-            var baseURL = currentURL.substring(0, currentURL.lastIndexOf('/') + 1);
-            var newURL = baseURL + 'index.html';
-            window.location.href = newURL;
-          } else {
-            alert('Invalid email or password. Please try again.');
-          }
-  
-          // Reset the form
-          loginForm.reset();
-        });
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const loginForm = document.getElementById('login-form');
+
+      loginForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Get user input
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        // Check if the email and password match a user in localStorage
+        const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+        const matchedUser = existingUsers.find(user => user.email === email && user.password === password);
+
+        if (matchedUser) {
+          matchedUser.loggedIn = true;
+          existingUsers.splice(existingUsers.indexOf(matchedUser), 1, matchedUser);
+          localStorage.setItem('users', JSON.stringify(existingUsers));
+          alert('Login successful!');
+          var currentURL = window.location.href;
+          var baseURL = currentURL.substring(0, currentURL.lastIndexOf('/') + 1);
+          var newURL = baseURL + 'index.html';
+          window.location.href = newURL;
+        } else {
+          alert('Invalid email or password. Please try again.');
+        }
+
+        // Reset the form
+        loginForm.reset();
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>

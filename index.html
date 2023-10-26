@@ -36,6 +36,7 @@
     <div class="action-btns">
       <a href="./search.html"><i class="fa-solid fa-magnifying-glass fa-lg"></i></a>
       <a href="./cart.html"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
+      <a href="./support.html"><i class="fa-solid fa-ticket"></i></a>
       <a href="./login.html"><button class="login-btn">Login</button></a>
     </div>
   </header>
@@ -67,8 +68,8 @@
         </div>
       </div>
       <p class="section-header">FEATURED</p>
-      <div class="featured-section" style="cursor: pointer;" onclick="redirectToProductPage()">
-        <div class="featured-card">
+      <div class="featured-section">
+        <div class="featured-card" onclick="redirectToProductPage('oversized')">
           <img class="star-product" src="./assets/star.svg" alt="" />
           <img class="card-img" src="./assets/oversized1.jpg" alt="" />
           <div class="product-info">
@@ -87,7 +88,7 @@
             </div>
           </div>
         </div>
-        <div class="featured-card">
+        <div class="featured-card" onclick="redirectToProductPage('tshirt')">
           <img class="star-product" src="./assets/star.svg" alt="" />
           <img class="card-img" src="./assets/tshirt.jpg" alt="" />
           <div class="product-info">
@@ -107,7 +108,7 @@
             </div>
           </div>
         </div>
-        <div class="featured-card">
+        <div class="featured-card" onclick="redirectToProductPage('hoodie')">
           <img class="star-product" src="./assets/star.svg" alt="" />
           <img class="card-img" src="./assets/hoodie.jpg" alt="" />
           <div class="product-info">
@@ -125,14 +126,14 @@
             </div>
           </div>
         </div>
-        <div class="featured-card">
+        <div class="featured-card" onclick="redirectToProductPage('highneck')">
           <img class="star-product" src="./assets/star.svg" alt="" />
           <img class="card-img" src="./assets/fullsleve.jpg" alt="" />
           <div class="product-info">
             <p>Sleek Comfort: High Neck Full Sleeve T-Shirt</p>
             <div class="product-description">
               Elevate your wardrobe with our high neck, full sleeve t-shirt.
-              Experience a perfect blend of style and comfort, ideal for any
+              Experience a perfect blend of style and comfort, ideal fo6+r any
               season or occasion.
             </div>
             <div class="product-action">
@@ -182,13 +183,17 @@
         </div>
       </div>
     </div>
+    <div class="lower-footer-section">Made With ❤️ By Aakash Jha</div>
     <div class="lower-footer-section">&copy; All Rights Reserved</div>
   </footer>
+  <script src="./js/auth.js"></script>
   <script>
-    function redirectToProductPage() {
+ 
+
+    function redirectToProductPage(product) {
       var currentURL = window.location.href;
       var baseURL = currentURL.substring(0, currentURL.lastIndexOf('/') + 1);
-      var newURL = baseURL + 'product.html';
+      var newURL = baseURL + `product.html?product=${product}`;
       window.location.href = newURL;
     }
     function redirectToCategoryPage() {
